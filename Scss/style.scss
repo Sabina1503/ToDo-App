@@ -1,32 +1,6 @@
 @import "variable";
-
-
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;600&display=swap");
-// :root {
-//   --switch-bg: url(../images/icon-moon.svg);
-//   --bg-img: url(../images/bg-mobile-light.jpg);
-//   --Very_Grayish_Blue: hsl(236, 33%, 92%);
-//   --Light_Grayish_Blue: hsl(233, 11%, 84%);
-//   --Dark_Grayish_Blue: hsl(236, 9%, 61%);
-//   --Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
-
-// }
-
-// //Dark Theme
-
-// [data-theme="dark"] {
-//   --switch-bg: url(../images/icon-sun.svg);
-//   --text-color: hsl(236, 9%, 61%);
-//   --bg-img: url(../images/bg-mobile-dark.jpg);
-//   --Very_Dark_Blue: hsl(235, 21%, 11%);
-//   --Very_Dark_Desaturated_blue: hsl(235, 24%, 19%);
-//   --Light_Grayish_Blue: hsl(234, 39%, 85%);
-//   --Light_Grayish_Blue_hover: hsl(236, 33%, 92%);
-//   --Dark_Grayish_Blue: hsl(234, 11%, 52%);
-//   --Very_Grayish_Blue: hsl(233, 14%, 35%);
-//   --Very_Dark_Grayish_Blue_hover: hsl(237, 14%, 26%);
-// }
 
 
 @mixin space-center() {
