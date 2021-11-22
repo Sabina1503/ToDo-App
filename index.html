@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Scss/style.css">
+   
+</head>
+
+<body> 
+    
+    <div class="main">
+        <div class="image">
+            <div class="head">
+                <h1>TODO</h1>
+                <img class="moon" id="dark-change" src="images/icon-moon.svg" alt="">
+                <img class="sun" id="light-change" src="images/icon-sun.svg" alt="">
+            </div>
+        
+        </div>
+        <div class="list-main">
+        <div class="card add wrapper">
+           
+            <div class="text-container inputField"> 
+                <button id="addBtn" class="btnn">+</button>
+                <input type="text" class="text-input" id="addText" placeholder="Create a new todo...">
+            </div>
+            
+        </div>
+      
+        <ul class="todos"></ul>
+        <div  class="select" >
+            <div  class="filter-todo">
+           <option value="all">All</option>
+           <option value="active">Active</option>
+           <option value="completed">Completed</option>
+           </div>
+         </div>
+        </div>
+    </div>
+
+       <script src="Sortable.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script> -->
+    <script src="script.js"></script>
+ 
+</body>
+
+</html>

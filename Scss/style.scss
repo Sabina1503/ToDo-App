@@ -1,0 +1,443 @@
+@import "variable";
+@import "tablet";
+@import "desktop";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;600&display=swap");
+:root {
+  --switch-bg: url(../images/icon-moon.svg);
+  --bg-img: url(../images/bg-mobile-light.jpg);
+  --Very_Grayish_Blue: hsl(236, 33%, 92%);
+  --Light_Grayish_Blue: hsl(233, 11%, 84%);
+  --Dark_Grayish_Blue: hsl(236, 9%, 61%);
+  --Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
+
+}
+
+//Dark Theme
+
+[data-theme="dark"] {
+  --switch-bg: url(../images/icon-sun.svg);
+  --text-color: hsl(236, 9%, 61%);
+  --bg-img: url(../images/bg-mobile-dark.jpg);
+  --Very_Dark_Blue: hsl(235, 21%, 11%);
+  --Very_Dark_Desaturated_blue: hsl(235, 24%, 19%);
+  --Light_Grayish_Blue: hsl(234, 39%, 85%);
+  --Light_Grayish_Blue_hover: hsl(236, 33%, 92%);
+  --Dark_Grayish_Blue: hsl(234, 11%, 52%);
+  --Very_Grayish_Blue: hsl(233, 14%, 35%);
+  --Very_Dark_Grayish_Blue_hover: hsl(237, 14%, 26%);
+}
+
+
+@mixin space-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin space-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin space-around() {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+* {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+body {
+   background: $bg ;
+  overflow-x: hidden;
+  .main{
+    @include space-center();
+    flex-direction: column
+  }
+}
+.image {
+  @include space-center();
+  width: 100%;
+  height: 15rem;
+  background-image: url("../images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .head {
+    @include space-between();
+    width: 70%;
+    height: 10rem;
+    h1 {
+      display: inline-block !important;
+      color: white;
+      letter-spacing: 1rem;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    img {
+      position: relative;
+      right: 0.6rem;
+      cursor: pointer;
+    }
+    img.sun {
+      display: none;
+    }
+  }
+}
+
+.list-main {
+  position: relative;
+  bottom: 150px;
+  margin: auto;
+  .todos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.add {
+  @include space-center();
+  margin: 4rem 0 2.5rem 0;
+  border-radius: 0.5rem;
+
+  .text-container {
+    @include space-center();
+
+    .text-input {
+      border: none;
+      background: white;
+      outline: none;
+      font-size: 1.4rem;
+      color: black;
+      width: 100% !important;
+      height: 50px;
+      border-radius: 0.2rem;
+      padding-left: 3rem;
+      font-size: 1.4rem;
+      font-family: $Font_Family;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    color: rgb(160, 155, 155);
+    font-weight: bold;
+
+
+  }
+
+    #addBtn {
+      color: $text-color;
+      background: white;
+      cursor: pointer;
+      position: relative;
+      left: 30px;
+      border-radius: 50%;
+      background: none;
+      outline: none;
+      border: 1px solid lightgray;
+      width: 1.7rem;
+      height: 1.5rem;
+    }
+    #addBtn:hover{
+     background: #3A7BFD;
+     transition: 0.5s;
+     color: white;
+    }
+}
+.fall{
+  transform: rotateZ(180deg);
+  transition: 0.5s;
+  opacity: 0;
+  display: inline-block;
+}
+
+.todo {
+  @include space-between();
+  background-color: white;
+  //  padding: 5px ;
+  border-bottom: 0.5px solid rgb(211, 205, 205) !important;
+  width: 250px;
+  border-radius: 5px;
+  height: 50px;
+  margin-left: 20px;
+ 
+  .complete-btn {
+    border-radius: 50%;
+    background: none;
+    outline: none;
+    border: 1px solid lightgray;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: 5px;
+    cursor: pointer;
+
+  }
+  .times-btn {
+    border: none;
+    background: none;
+    color: $text-color;
+    margin-right:10px;
+    opacity: 0;
+    i {
+      font-size: 20px;
+    }
+  }
+
+}
+.todo:hover .times-btn{
+  opacity: 1;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.fa-check {
+  display: none;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  .complete-btn{
+      background: rgb(121, 9, 92);
+      background: linear-gradient(
+      90deg,
+      rgba(121, 9, 92, 0.7679446778711485) 43%,
+      rgba(222, 0, 255, 0.9304096638655462) 77%
+    );
+    border: none;
+  }
+  .fa-check {
+    display: inline-block;
+  }
+}
+.fa-times,
+.fa-check {
+  pointer-events: none;
+  
+}
+
+.select{
+  @include space-center();
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: white; 
+  margin: auto;  
+  margin-top: 15px ;
+  margin-left: 25px;
+  border-radius: 5px; 
+
+  option{
+    cursor: pointer;
+  }
+  .filter-todo{
+  @include space-around();
+  width: 220px;
+  height: 50px;
+ 
+}
+}
+.select::after{
+  pointer-events: none;
+}
+.todos .card.dragging {
+  opacity: 0.5;
+}
+.night {
+     background-color: $bg_dark;
+  .image {
+    background-image: url("../images/bg-mobile-dark.jpg");
+    img.moon {
+      display: none;
+    }
+    img.sun {
+      display: inline-block;
+      color: white;
+      position: relative;
+      right: 0.6rem;
+    }
+  }
+  .select{
+    @include space-center();
+    position: relative;
+    width: 255px;
+    height: 50px;
+    background: #25273C ;
+    margin: auto;  
+    margin-top: 15px ;
+    margin-left: 25px;
+
+  }
+  .text-input {
+    background: $input-bg !important;
+    color: $Very_Light_Grayish_Blue;
+    font-size: 1.6rem;
+    font-family: $Font_Family;
+  }
+  #addBtn {
+    color: $text-color;
+    background: $input-bg !important;
+    border: 1px solid rgb(107, 104, 104);
+    cursor: pointer;
+    color: white;
+  }
+  #addBtn:hover{
+    background: #3A7BFD !important;
+    transition: 0.5s !important;
+  }
+  .todo{
+    background: $input-bg ;
+    color: white;
+    border-bottom: 0.5px solid rgb(102, 100, 100) !important;
+  
+    .completed {
+      text-decoration: line-through;
+      
+      .fa-check {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+//--------------------FOR TABLET
+@media only screen and (min-width: 576px) {
+  .image {
+    width: 100%;
+    height: 15rem;
+    background-image: url("../images/bg-desktop-light.jpg");
+
+    .head {
+      width: 32rem !important;
+      height: 10rem;
+    }
+  }
+  .add {
+    @include space-center();
+    margin: 4rem 0 2.5rem 0;
+    border-radius: 0.5rem;
+    .text-container {
+      @include space-center();
+      width: 30rem;
+      .text-input {
+        font-size: 1.4rem;
+        width: 100%;
+        height: 2.5rem !important;
+        border-radius: 0.2rem;
+        padding-left: 3rem;
+      }
+    }
+    .plus-container {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+      #addBtn {
+        width: 30px !important;
+        border: 1px solid gray;
+        position: absolute;
+        right: 16rem;
+      }
+    }
+  }
+  .list-main {
+    position: relative;
+    bottom: 150px;
+    margin: auto;
+  }
+  .todo {
+    @include space-between();
+    background-color: white;
+   
+    border-bottom: 0.1rem solid lightgray;
+    width: 470px;
+    border-radius: 5px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+  .select{
+    @include space-center();
+    position: relative;
+    width: 470px;
+    height: 50px;
+    background: white; 
+    margin: auto;  
+    margin-top: 5px ;
+    margin-left: 25px;
+    border-radius: 5px; 
+  
+
+  }
+  .night {
+    .image {
+      background-image: url("../images/bg-desktop-dark.jpg");
+    }
+    .select{
+      @include space-center();
+      position: relative;
+      width: 470px;
+      height: 50px;
+      background: #25273C; 
+      margin: auto;  
+      margin-top: 5px ;
+      margin-left: 25px;
+      border-radius: 5px; 
+    
+  
+    }
+  }
+}
+
+// -------------------FOR DESKTOP
+
+@media only screen and (min-width: 992px) {
+  .image {
+    width: 100%;
+    height: 15rem;
+    background-image: url("../images/bg-desktop-light.jpg");
+    .head {
+      width: 35rem !important;
+      height: 10rem;
+    }
+  }
+  .text-container {
+    @include space-center();
+    width: 33rem !important;
+    .text-input {
+      height: 4rem !important;
+      border-radius: 0.2rem;
+      padding-left: 3rem;
+    }
+  }
+  .plus-container {
+    #addBtn {
+      width: 30px !important;
+      height: 35px !important;
+      border: 1px solid gray;
+      position: absolute;
+      right: 18rem !important;
+    }
+  }
+  .list-main {
+    position: relative;
+    bottom: 150px;
+    margin: auto;
+    width: 500px;
+  }
+  .todo {
+    @include space-between();
+    background-color: white;
+    border-bottom: 0.1rem solid lightgray;
+    width: 470px;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+  .night {
+    .image {
+      background-image: url("../images/bg-desktop-dark.jpg");
+    }
+  }
+}

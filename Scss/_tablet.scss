@@ -1,0 +1,121 @@
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;600&display=swap");
+// :root {
+//   --switch-bg: url(../images/icon-moon.svg);
+//   --bg: hsl(236, 33%, 92%);
+//   --text-color: hsl(235, 19%, 35%);
+//   --bg-img: url(../images/bg-mobile-light.jpg);
+//   --input-bg: #fff;
+//   --Very_Light_Gray: hsl(0, 0%, 98%);
+//   --Very_Grayish_Blue: hsl(236, 33%, 92%);
+//   --Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
+//   --Light_Grayish_Blue: hsl(233, 11%, 84%);
+//   --Dark_Grayish_Blue: hsl(236, 9%, 61%);
+//   --Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
+//   --Check_Background: linear-gradient(
+//     hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+//   );
+// }
+
+// //Dark Theme
+
+// [data-theme="dark"] {
+//   --switch-bg: url(../images/icon-sun.svg);
+//   --bg: hsl(235, 21%, 11%);
+//   --text-color: hsl(236, 9%, 61%);
+//   --bg-img: url(../images/bg-mobile-dark.jpg);
+//   --input-bg: hsl(237, 14%, 26%);
+//   --Very_Dark_Blue: hsl(235, 21%, 11%);
+//   --Very_Dark_Desaturated_blue: hsl(235, 24%, 19%);
+//   --Light_Grayish_Blue: hsl(234, 39%, 85%);
+//   --Light_Grayish_Blue_hover: hsl(236, 33%, 92%);
+//   --Dark_Grayish_Blue: hsl(234, 11%, 52%);
+//   --Very_Grayish_Blue: hsl(233, 14%, 35%);
+//   --Very_Dark_Grayish_Blue_hover: hsl(237, 14%, 26%);
+// }
+
+// // Typography
+
+// $Font_size: 18px;
+// $Font_Family: "Josefin Sans", sans-serif;
+
+// @mixin space-center() {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// @mixin space-between() {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+// @mixin space-around() {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+// }
+
+// @media only screen and (min-width: 576px)  {
+//     .image{
+//         width: 100%;
+//         height: 15rem;
+//         background-image: url('../images/bg-desktop-light.jpg');
+        
+//         .head{
+//             width: 32rem !important;
+//             height: 10rem;
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+     
+         
+//              h1{
+//                   display: inline-block !important;
+//                   color: white; 
+//                   letter-spacing: 1rem;
+//                   font-family: 'Josefin Sans', sans-serif;    
+//           }
+//           i{
+//             color: white;
+//             font-size: 2rem;
+//           }
+//         }
+//     }
+//     .add {
+//       @include space-center();
+//       margin: 4rem 0 2.5rem 0;
+//       border-radius: 0.5rem;
+//       .text-container {
+//         @include space-center();
+//         width: 30rem;
+//       .text-input {
+//         font-size: 1.4rem;
+//         width: 100%;
+//         height: 2.5rem !important;
+//         border-radius: 0.2rem;
+//         padding-left: 3rem;
+//       }
+//     }
+//       .plus-container {
+//         position: absolute;
+//         width: 1.5rem;
+//         height: 1.5rem;
+//         cursor: pointer;
+//         #addBtn{
+//           width: 30px !important;
+//           border: 1px solid gray;
+//           position: absolute;
+//           right: 16rem ;
+//         }
+//       }
+//     }
+//     .night{
+//         .image{
+//             background-image: url('../images/bg-desktop-dark.jpg');
+//         }
+//     }
+//     .card{
+//       display: flex;
+      
+//     }
+//   }
